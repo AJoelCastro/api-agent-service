@@ -1,6 +1,7 @@
 package com.arturocastro.apiagentservice.controller;
 
 import com.arturocastro.apiagentservice.service.AgentService;
+import com.openai.models.beta.chatkit.threads.ChatSession;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,8 +21,8 @@ public class AgentControlller {
 
     @PostMapping("/test")
     public ResponseEntity<?> agentBuilder(){
-        agentService.agentBuilder();
-        return ResponseEntity.ok().build();
+        ChatSession chatSession = agentService.agentBuilder();
+        return ResponseEntity.ok(chatSession);
     }
 
 }
