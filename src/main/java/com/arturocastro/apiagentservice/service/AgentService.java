@@ -106,6 +106,10 @@ public class AgentService {
         System.out.println("chatKitThread: " + chatKitThread);
 
 
+//        2025-11-13T15:53:35.648-05:00 ERROR 37636 --- [api-agent-service] [nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.openai.errors.BadRequestException: 400: Invalid 'thread_id': 'thread_VfOIwMfibDwVjdzFHcn9AmQX'. Expected an ID that begins with 'cthr'.] with root cause
+//
+//com.openai.errors.BadRequestException: 400: Invalid 'thread_id': 'thread_VfOIwMfibDwVjdzFHcn9AmQX'. Expected an ID that begins with 'cthr'.
+
         return client.beta().chatkit().sessions().create(sessionCreateParams);
 
     }
