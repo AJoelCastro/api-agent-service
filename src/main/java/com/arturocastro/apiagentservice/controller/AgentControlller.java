@@ -1,7 +1,9 @@
 package com.arturocastro.apiagentservice.controller;
 
 import com.arturocastro.apiagentservice.service.AgentService;
+import com.openai.models.beta.chatkit.threads.ChatKitThread;
 import com.openai.models.beta.chatkit.threads.ChatSession;
+import com.openai.services.blocking.beta.chatkit.SessionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
